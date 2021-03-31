@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Vue Test</title>
+   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   <div id="app">
+      <button @click="pushTodo">Push</button>
+      <ul class="todos">
+         <li v-for="(todo, index) in todos" 
+         :key="index">
+            {{ todo.title }}
+         </li>
+      </ul>
+      <ul class="herofy">
+         <li v-for="(value, index) in heropy">{{ value }}</li>
+      </ul>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="app.js"></script>
+</body>
+</html>
