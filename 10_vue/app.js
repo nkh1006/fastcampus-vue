@@ -4,21 +4,16 @@ const vm = new Vue({
       msg: 'Hello Vue !'
    },
    computed: {
-      reversedMsg: {
-         get () {
-            return this.msg.split('').reverse().join('')
-         },
-         set (v) {
-            this.msg = v;
-         }
+      reversedMsg () {
+         return this.msg.split('').reverse().join('');
       }
    },
    watch: {
-      msg(newMsg) {
+      msg (newMsg) {
          console.log(newMsg);
       },
-      reversedMsg(value) {
+      reversedMsg (value) {
          console.log(value);
       }
    }
-});   
+})

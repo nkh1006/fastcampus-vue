@@ -1,0 +1,9 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background: red;
+}
+
+button {
+    margin:0 0 15px;
+}
