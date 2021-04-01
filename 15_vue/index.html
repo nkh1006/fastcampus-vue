@@ -8,15 +8,11 @@
 </head>
 <body>
    <div id="app">
-      <button @click="pushTodo">Push</button>
       <ul class="todos">
          <li v-for="(todo, index) in todos" 
-         :key="index">
+         :key="index" class="'item-' + (index + 1)" @click="clickMethod(todo.title)">
             {{ todo.title }}
          </li>
-      </ul>
-      <ul class="herofy">
-         <li v-for="(value, key, index) in heropy" :key="index">{{ value }}</li>
       </ul>
    </div>
    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

@@ -15,6 +15,7 @@
             {{ todo.title }}
          </li>
       </ul>
+      <button @click="addHomepage">Add Homepage</button>
       <ul class="herofy">
          <li v-for="(value, key, index) in heropy" :key="index">{{ value }}</li>
       </ul>

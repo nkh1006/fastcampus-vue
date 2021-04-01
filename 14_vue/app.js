@@ -9,14 +9,16 @@ const vm = new Vue({
       heropy: {
          name: 'HEROPY',
          age: 35,
-         homepage: '',
-         email: ''
       }
    },
    methods: {
       pushTodo() {
          // this.todos[3] = { title: '야식먹기' }
-         this.todos.push({ title: '야식 먹기' })
+         // this.todos.push({ title: '야식 먹기' })
+         Vue.set(this.todos, 3, {title : '야식 먹기 !'})
+      },
+      addHomepage() {
+         this.$set(this.heropy, 'homepage', 'heropy.blog')
       }
    }
 });
